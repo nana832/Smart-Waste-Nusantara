@@ -157,7 +157,7 @@ if(isset($_POST['submit'])){
     </div>
   </header><!-- End Header -->
 
-  <section id="about" class="about" style="margin-top: 10px;">
+  <section id="about" class="about" style="margin-top: 49px;">
 
 
 
@@ -170,7 +170,7 @@ if(isset($_POST['submit'])){
 <?php if (isset($msg)) echo $msg; ?>
 
    <form method="post" action="trash.php" enctype="multipart/form-data">
-   <div class="container" style="margin-top: 100px;">
+   <div class="container" style="margin-top: 60px;">
 	<div class="row">
 		<div class="col-md-3">
 			<div class="contact-info">
@@ -192,7 +192,7 @@ if(isset($_POST['submit'])){
 				<div class="form-group">
 				  <label class="control-label col-sm-2" for="lname">No.Telp:</label>
 				  <div class="col-sm-10">          
-					<input type="number" class="form-control" id="mobile" placeholder="Maukkan Nomor Telepon Anda" name="mobile"required min ="08-xxxxxxxxxxx" max="080000000000">
+					<input type="number" class="form-control" id="mobile" placeholder="Masukkan Nomor Telepon Anda" name="mobile"required min ="08-xxxxxxxxxxx" max="089999999999">
 				  </div>
 				</div>
 				<div class="form-group">
