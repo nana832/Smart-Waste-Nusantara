@@ -207,3 +207,46 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE volume_sampah (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    kategori VARCHAR(50),       -- Organik, Anorganik, Residu
+    volume FLOAT,               -- Volume dalam ton
+    waktu TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE sampah_proses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    kategori VARCHAR(50),       -- Organik, Anorganik, Residu
+    volume FLOAT,               -- Volume dalam ton
+    waktu TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE komposisi_sampah (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    kategori VARCHAR(50),       -- Organik, Anorganik, Residu
+    persentase FLOAT,           -- Persentase komposisi
+    waktu TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE penjemputan_sampah (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    hari VARCHAR(20),
+    waktu TIME,
+    lokasi_pengangkutan VARCHAR(255),
+    lokasi_terkini_lat FLOAT,
+    lokasi_terkini_lng FLOAT
+);
+
+
+INSERT INTO volume_sampah (kategori, volume) VALUES ('Organik', 12.5), ('Anorganik', 8.3), ('Residu', 5.2);
+INSERT INTO sampah_proses (kategori, volume) VALUES ('Organik', 10.2), ('Anorganik', 6.7), ('Residu', 3.8);
+INSERT INTO komposisi_sampah (kategori, persentase) VALUES ('Organik', 60.0), ('Anorganik', 30.0), ('Residu', 10.0);
+
+INSERT INTO penjemputan_sampah (hari, waktu, lokasi_pengangkutan, lokasi_terkini_lat, lokasi_terkini_lng) 
+VALUES 
+('Senin', '08:00:00', 'Jalan Merdeka No.1', -6.917464, 107.619123),
+('Selasa', '10:00:00', 'Jalan Sudirman No.25', -6.902494, 107.618901),
+('Rabu', '08:00:00', 'Jalan Pegangsaan No.33', -6.917464, 107.619123),
+('Kamis', '10:00:00', 'Perumahan Villar Baru', -6.902494, 107.618901),
+('Sabtu', '08:00:00', 'Perumahan Permata Modern', -6.902494, 107.618901)

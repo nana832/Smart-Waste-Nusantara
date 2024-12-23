@@ -60,7 +60,7 @@ if(isset($_POST['update'])){
 
         echo " <span style='color:red'>Record Updated!</span>";   
         
-       header("Location: http://localhost/EmailVerification/adminlogin/welcome.php", TRUE, 301);
+       header("Location: http://localhost/waste-management-system/adminlogin/welcome.php", TRUE, 301);
        exit();
   
     }
@@ -79,7 +79,7 @@ if(isset($_POST['update'])){
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet"type="text/css"href="styleupdate.css">
-    <title>Edit || Update</title>
+    <title>Edit || Perbarui</title>
   
 </head>
 <body>
@@ -94,20 +94,20 @@ if(isset($_POST['update'])){
 		<div class="col-md-3">
 			<div class="contact-info">
 				<img src="images.jfif" alt="image"/>
-				<h2>Edit Complain</h2>
-				<h4>Please provide valid Information !</h4>
+				<h2>Edit Keluhan</h2>
+				<h4>Mohon berikan informasi yang valid !</h4>
 			</div>
 		</div>
 		<div class="col-md-9">
 			<div class="contact-form">
-				<div class="form-group">
-				  <label class="control-label col-sm-2" for="fname"> Name:</label>
+				<div class="form-group">	
+				  <label class="control-label col-sm-2" for="fname"> Nama:</label>
 				  <div class="col-sm-10">          
 					<input type="text" class="form-control" id="name" placeholder="Enter Your Name" name="name" required value="<?php echo "$n"?>" required>
 				  </div>
 				</div>
 				<div class="form-group">
-				  <label class="control-label col-sm-2" for="lname">Mobile:</label>
+				  <label class="control-label col-sm-2" for="lname">No.Telp:</label>
 				  <div class="col-sm-10">  
                     <input  value="<?php echo $id ?>" name ="id"  style="display:none">        
 					<input type="number" class="form-control" id="mobile" placeholder="Enter Your Mobile Number" name="mobile" required value="<?php echo "$mbl"?>">
@@ -119,34 +119,38 @@ if(isset($_POST['update'])){
 				  </div>
 				</div>
 				<div class="form-group">
-					<label class="control-label col-sm-2" for="option">Category:</label>
+					<label class="control-label col-sm-2" for="option">Kategori:</label>
 					<div class="col-sm-10">          
-					    <input type="checkbox" name="wastetype[]" value="organic">Organic
-                        <input type="checkbox" name="wastetype[]" value="inorganic">Inorganic
-                        <input type="checkbox" name="wastetype[]" value="Household">Metallic
-                        <input type="checkbox" name="wastetype[]" value="mixed"checked>All
+					    <input type="checkbox" name="wastetype[]" value="organic">Organik
+                        <input type="checkbox" name="wastetype[]" value="inorganic">Anorganik
+                        <input type="checkbox" name="wastetype[]" value="Household"> Limbah Rumah Tangga
+                        <input type="checkbox" name="wastetype[]" value="mixed"checked> Semua
 					</div>
 				  </div>
 				  <div class="form-group">
-					<label class="control-label col-sm-2" for="lname">Location:</label>
+					<label class="control-label col-sm-2" for="lname">Lokasi:</label>
 					<div class="col-sm-10">          
 					   <select class="form-control" id="location" name="location" value="<?php echo "$lo"?>">
-						   <option class="form-control" >Ktm</option>
-						   <option class="form-control" >Bktpur</option>
-						   <option class="form-control" >lalitpur</option>
-						   <option class="form-control" >sanepa</option>
-						   <option class="form-control" >Kalanki</option>
+						  <option class="form-control" >WP KIPP</option>
+						   <option class="form-control" >WP IKN Utara</option>
+						   <option class="form-control" >WP IKN Barat</option>
+						   <option class="form-control" >WP IKN Selatan</option>
+						   <option class="form-control" >WP IKN Timur I</option>
+						   <option class="form-control" >WP IKN Timur II</option>
+						   <option class="form-control" >WP Simpang Samboja</option>
+						   <option class="form-control" >WP Kuala Samboja</option>
+						   <option class="form-control" >WP Muara Jawa</option>
 					   </select>
 					</div>
 				  </div>
 				<div class="form-group">
 				  
 				  <div class="col-sm-10">
-					<input type="comment" class="form-control" rows="5" id="locationdescription" placeholder="Enter Location details..." name="locationdescription" value="<?php echo "$lod"?>" required>
+					<input type="comment" class="form-control" rows="5" id="locationdescription" placeholder="Masukkan Detail Lokasi.." name="locationdescription" value="<?php echo "$lod"?>" required>
 				  </div>
 				</div>
 				<div class="form-group">
-					<label class="control-label col-sm-2" for="lname">Pictures:</label>
+					<label class="control-label col-sm-2" for="lname">Bukti Foto:</label>
 					<div class="col-sm-10">          
 					  <input type="file" class="form-control" id="file" name="file" value="<?php echo "$f"?>"required accept="image/*" capture="camera">
 					</div>
@@ -155,7 +159,7 @@ if(isset($_POST['update'])){
 				  <div class="col-sm-offset-2 col-sm-10">
 				    <input type="hidden" class="form-control" id="date" name="date" value="<?php $timezone = date_default_timezone_set("Asia/Kathmandu");
                                                                                              echo  date("g:ia ,\n l jS F Y");?>">
-					<button type="submit" class="btn btn-default" name="update" id="update"  onclick ="CheckBoxCheck()">Update</button>
+					<button type="submit" class="btn btn-default" name="update" id="update"  onclick ="CheckBoxCheck()">Perbarui</button>
 				  </div>
 				</div>
 			</div>

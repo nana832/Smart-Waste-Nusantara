@@ -1,53 +1,102 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-html,body{
-    background: #6665ee;
-    font-family: 'Poppins', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+html,
+body {
+  background: #6665ee;
+  font-family: "Poppins", sans-serif;
 }
-::selection{
-    color: #fff;
-    background: #6665ee;
+::selection {
+  color: #fff;
+  background: #6665ee;
 }
-.container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.container .form{
-    background: #fff;
-    padding: 30px 35px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.container .form {
+  background: #fff;
+  padding: 30px 35px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.container .form form .form-control{
-    height: 40px;
-    font-size: 15px;
+.container .form form .form-control {
+  height: 40px;
+  font-size: 15px;
 }
-.container .form form .forget-pass{
-    margin: -15px 0 15px 0;
+.container .form form .forget-pass {
+  margin: -15px 0 15px 0;
 }
-.container .form form .forget-pass a{
-   font-size: 15px;
+.container .form form .forget-pass a {
+  font-size: 15px;
 }
-.container .form form .button{
-    background: #6665ee;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 500;
-    transition: all 0.3s ease;
+.container .form form .button {
+  background: #6665ee;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
-.container .form form .button:hover{
-    background: #5757d1;
+.container .form form .button:hover {
+  background: #5757d1;
 }
-.container .form form .link{
-    padding: 5px 0;
+.container .form form .link {
+  padding: 5px 0;
 }
-.container .form form .link a{
-    color: #6665ee;
+.container .form form .link a {
+  color: #6665ee;
 }
-.container .login-form form p{
-    font-size: 14px;
+.container .login-form form p {
+  font-size: 14px;
 }
-.container .row .alert{
-    font-size: 14px;
+.container .row .alert {
+  font-size: 14px;
+}
+
+/* MAP STYLING */
+#map-modal {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/* TABEL STYLING */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.table thead {
+  background-color: #4caf50;
+  color: white;
+}
+
+.table th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
 }

@@ -1,44 +1,105 @@
-body{
+body {
     background-color: #25274d;
+    margin: 0; /* Menghilangkan margin bawaan */
+    padding: 0;
 }
-.contact{
+
+.contact {
     padding: 4%;
-    height: 400px;
+    height: auto; /* Membuat tinggi fleksibel */
 }
-.col-md-3{
+
+.col-md-3 {
     background: lightblue;
     padding: 4%;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
+    text-align: center; /* Tengah untuk tampilan kecil */
 }
-.contact-info{
-    margin-top:10%;
+
+.contact-info {
+    margin-top: 10%;
 }
-.contact-info img{
+
+.contact-info img {
     margin-bottom: 15%;
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    
 }
-.contact-info h2{
+
+.contact-info h2 {
     margin-bottom: 10%;
 }
-.col-md-9{
+
+.col-md-9 {
     background: #fff;
     padding: 3%;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
 }
-.contact-form label{
-    font-weight:600;
+
+.contact-form label {
+    font-weight: 600;
 }
-.contact-form button{
+
+.contact-form button {
     background: #25274d;
     color: #fff;
     font-weight: 600;
     width: 25%;
 }
-.contact-form button:focus{
-    box-shadow:none;
+
+.contact-form button:focus {
+    box-shadow: none;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .contact {
+        padding: 6%; /* Tambahkan lebih banyak padding untuk layar kecil */
+    }
+
+    .col-md-3,
+    .col-md-9 {
+        border-radius: 0.5rem; /* Atur ulang border radius */
+        text-align: center; /* Tengah semua konten */
+        margin-bottom: 5%; /* Tambahkan jarak antar elemen */
+    }
+
+    .col-md-3 {
+        border-bottom-left-radius: 0; /* Hapus radius bawah kiri */
+    }
+
+    .col-md-9 {
+        border-top-right-radius: 0; /* Hapus radius atas kanan */
+    }
+
+    .contact-info img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contact-form button {
+        width: 50%; /* Lebarkan tombol pada layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 8%;
+    }
+
+    .contact-info img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .contact-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .contact-form button {
+        width: 70%; /* Lebarkan tombol lebih lagi untuk layar kecil */
+    }
 }

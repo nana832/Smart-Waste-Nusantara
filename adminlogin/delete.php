@@ -11,7 +11,7 @@ include('connection.php');
         echo "<span></span>";
         ?>
         
-        <META HTTP-EQUIV="Refresh" CONTENT="0; URL=http://localhost/EmailVerification/adminlogin/welcome.php">
+        <META HTTP-EQUIV="Refresh" CONTENT="0; URL=http://localhost/waste-management-system/adminlogin/welcome.php">
         <?php
     }
     else {
