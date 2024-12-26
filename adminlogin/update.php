@@ -60,7 +60,7 @@ if(isset($_POST['update'])){
 
         echo " <span style='color:red'>Record Updated!</span>";   
         
-       header("Location: http://localhost/waste-management-system/adminlogin/welcome.php", TRUE, 301);
+       header("Location: http://localhost/smart-waste-nusantara/adminlogin/welcome.php", TRUE, 301);
        exit();
   
     }

@@ -1,4 +1,4 @@
-fetch('http://localhost/smart-waste-nusantara/get_data.php/')
+fetch("http://localhost/smart-waste-nusantara/get_data.php/")
   .then((response) => response.json())
   .then((data) => {
     // Data untuk Volume Sampah Masuk

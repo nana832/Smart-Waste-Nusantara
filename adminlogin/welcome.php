@@ -112,7 +112,7 @@ if($email != false && $password != false){
     </nav>
     <br> -->
     <!-- <div class="container"id="ch"> <b><mark> YOUR COMPLAIN HISTORY</mark></b></div> -->
-      <div class="container", style="margin: 50px;"
+      <div class="container", style="margin: 15px;"
 
  >     
       <table  class='table' >
@@ -201,7 +201,7 @@ function modalLauch(id){
     $('#toDeleteId').val(id);
 }
 function confirmDelete(){
-    window.location.replace("http://localhost/waste-management-system/adminlogin/delete.php?i="+delId);
+    window.location.replace("http://localhost/smart-waste-nusantara/adminlogin/delete.php?i="+delId);
 }
 </script>
 </body>
