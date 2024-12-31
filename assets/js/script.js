@@ -1,4 +1,4 @@
-fetch('http://localhost/smart-waste-nusantara/get_data.php')
+fetch('get_data.php')
   .then((response) => response.json())
   .then((data) => {
     // Data untuk Volume Sampah Masuk
@@ -12,6 +12,9 @@ fetch('http://localhost/smart-waste-nusantara/get_data.php')
     // Data untuk Komposisi Sampah
     const komposisiLabels = data.komposisi_sampah.map((row) => row.kategori);
     const komposisiData = data.komposisi_sampah.map((row) => row.persentase);
+
+    console.log(volumeLabels)
+    console.log(volumeData)
 
     // Bar Chart untuk Volume Sampah
     const volumeChart = new Chart(document.getElementById("volumeChart"), {
